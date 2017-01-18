@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "react-redux-todos",
+    "style": "scss",
+    "cssmodules": true,
+    "postcss": false,
+    "generatedWithVersion": 4
+  }
+}
