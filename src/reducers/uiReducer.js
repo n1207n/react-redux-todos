@@ -5,7 +5,7 @@ import { SET_VISIBILITY_FILTER } from '../constants/actionTypes';
 import initialState from './initialUIState';
 
 export default function uiReducer(state = initialState, action) {
-  switch (acion.type) {
+  switch (action.type) {
     case SET_VISIBILITY_FILTER:
       return objectAssign({}, state, {filter: action.filter});
 
