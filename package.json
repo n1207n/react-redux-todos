@@ -32,9 +32,11 @@
   "dependencies": {
     "object-assign": "4.1.0",
     "react": "15.4.1",
+    "react-bootstrap": "0.30.7",
     "react-dom": "15.4.1",
     "react-redux": "5.0.1",
     "react-router": "3.0.0",
+    "react-router-bootstrap": "0.23.1",
     "react-router-redux": "4.0.7",
     "redux": "3.6.0",
     "redux-thunk": "2.1.0"
@@ -71,8 +73,8 @@
     "html-webpack-plugin": "2.24.1",
     "isparta": "4.0.0",
     "istanbul": "0.4.5",
-    "json-loader": "0.5.4",
     "jsdom": "9.8.3",
+    "json-loader": "0.5.4",
     "mocha": "3.2.0",
     "mockdate": "2.0.1",
     "node-sass": "4.0.0",
