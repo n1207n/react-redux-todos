@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Nav, NavItem }  from 'react-bootstrap';
-import { IndexLinkContainer } from 'react-router-bootstrap';
+import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -16,11 +16,23 @@ class App extends React.Component {
             </NavItem>
           </IndexLinkContainer>
 
-          <IndexLinkContainer to={{ pathname: "/404" }}>
+          <LinkContainer to={{ pathname: "/active" }}>
+            <NavItem eventKey={1}>
+              Active
+            </NavItem>
+          </LinkContainer>
+
+          <LinkContainer to={{ pathname: "/completed" }}>
+            <NavItem eventKey={1}>
+              Completed
+            </NavItem>
+          </LinkContainer>
+
+          <LinkContainer to={{ pathname: "*" }}>
             <NavItem eventKey={2}>
               404 page
             </NavItem>
-          </IndexLinkContainer>
+          </LinkContainer>
         </Nav>
 
         {this.props.children}
