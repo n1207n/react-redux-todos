@@ -27,11 +27,11 @@ VisibleTodoList.propTypes = {
 function getVisibleTodoList(state, filter) {
   switch (filter) {
     case visibilityFilters.SHOW_ACTIVE:
-      return state.todos.filter(todo => !todo.completed);
+      return state.todoState.todos.filter(todo => !todo.completed);
     case visibilityFilters.SHOW_COMPLETED:
-      return state.todos.filter(todo => todo.completed);
+      return state.todoState.todos.filter(todo => todo.completed);
     default:
-      return state.todos;
+      return state.todoState.todos;
   }
 }
 

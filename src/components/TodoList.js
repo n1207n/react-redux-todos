@@ -3,8 +3,16 @@ import React, { PropTypes } from 'react';
 import Todo from './Todo';
 
 class TodoList extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+  }
+
   render () {
     const { todos, onTodoClick } = this.props;
+
+    if (todos.length == 0) {
+      return <h3>No todos to display</h3>
+    }
 
     return (
       <ul>
