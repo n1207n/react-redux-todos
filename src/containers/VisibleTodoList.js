@@ -7,23 +7,6 @@ import * as visibilityFilters from '../constants/visibilityFilters';
 
 import TodoList from '../components/TodoList';
 
-const VisibleTodoList = (props) => {
-  const { todos, actions } = props;
-
-  return (
-    <TodoList todos={todos} onTodoClick={actions.toggleTodo}/>
-  );
-};
-
-VisibleTodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    completed: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired,
-  }).isRequired).isRequired,
-  actions: PropTypes.object.isRequired,
-};
-
 function getVisibleTodoList(state, filter) {
   switch (filter) {
     case visibilityFilters.SHOW_ACTIVE:
@@ -37,17 +20,19 @@ function getVisibleTodoList(state, filter) {
 
 function mapStateToProps(state) {
   return {
-    todos: getVisibleTodoList(state, state.filter),
+    todos: getVisibleTodoList(state, state.uiState.filter),
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(actions, dispatch),
+    onTodoClick: (id) => {
+      dispatch(actions.toggleTodo(id));
+    },
   };
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(VisibleTodoList);
+)(TodoList);
