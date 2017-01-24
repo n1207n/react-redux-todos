@@ -16,18 +16,6 @@ class App extends React.Component {
             </NavItem>
           </IndexLinkContainer>
 
-          <LinkContainer to={{ pathname: "/active" }}>
-            <NavItem eventKey={1}>
-              Active
-            </NavItem>
-          </LinkContainer>
-
-          <LinkContainer to={{ pathname: "/completed" }}>
-            <NavItem eventKey={1}>
-              Completed
-            </NavItem>
-          </LinkContainer>
-
           <LinkContainer to={{ pathname: "*" }}>
             <NavItem eventKey={2}>
               404 page
