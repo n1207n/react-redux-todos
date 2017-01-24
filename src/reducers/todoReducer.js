@@ -38,8 +38,8 @@ export default function todoReducer(state = initialState, action) {
       });
 
     case types.TOGGLE_TODO:
-      return state.map(todo => {
-        todoSingleReducer(t, action);
+      return objectAssign({}, state, {
+        todos: state.todos.map(todo => todoSingleReducer(todo, action)),
       });
 
     default:

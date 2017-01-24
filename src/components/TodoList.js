@@ -11,13 +11,13 @@ class TodoList extends React.Component {
     const { todos, onTodoClick } = this.props;
 
     if (todos.length == 0) {
-      return <h3>No todos to display</h3>
+      return <h3>No todos to display</h3>;
     }
 
     return (
       <ul>
         {todos.map(todo => {
-          <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)}/>
+          return <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)}/>;
         })}
       </ul>
     );
