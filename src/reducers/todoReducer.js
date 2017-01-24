@@ -12,6 +12,7 @@ export default function todoReducer(state = initialState, action) {
         todos: [
           ...state.todos,
           {
+            id: action.id,
             text: action.text,
             completed: false,
           },
