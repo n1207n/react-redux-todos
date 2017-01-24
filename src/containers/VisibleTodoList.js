@@ -1,6 +1,4 @@
-import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import * as actions from '../actions/todoActions';
 import * as visibilityFilters from '../constants/visibilityFilters';
