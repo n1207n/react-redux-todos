@@ -1,6 +1,7 @@
 import React from 'react';
 
 import VisibleTodoList from '../containers/VisibleTodoList';
+import Footer from './Footer';
 
 class HomePage extends React.Component {
   render () {
@@ -8,6 +9,7 @@ class HomePage extends React.Component {
       <div>
         <h1>React Redux Todo</h1>
         <VisibleTodoList />
+        <Footer />
       </div>
     );
   }
